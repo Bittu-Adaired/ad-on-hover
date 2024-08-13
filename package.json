@@ -15,7 +15,9 @@
     "video.js": "^8.16.1",
     "videojs-contrib-ads": "^7.5.2",
     "videojs-ima": "^2.3.0",
-    "@heroicons/react": "^2.1.1"
+    "@heroicons/react": "^2.1.1",
+    "@types/can-autoplay": "^3.0.5",
+    "can-autoplay": "^3.0.2"
   },
   "devDependencies": {
     "typescript": "^5",
