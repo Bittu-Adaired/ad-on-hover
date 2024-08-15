@@ -19,8 +19,8 @@ export default function VideoGoogleImaV2({ url, onFinishHandler, setAdIsLoading 
 
     const [calculations, setCalculations] = useState<CalculationsStaateType>({
         initPlayer: false,
-        autoplayAllowed: false,
-        autoplayRequiresMute: false
+        autoplayAllowed: true,
+        autoplayRequiresMute: true
     })
 
     useEffect(() => {
@@ -32,8 +32,8 @@ export default function VideoGoogleImaV2({ url, onFinishHandler, setAdIsLoading 
                         // Muted autoplay is not allowed.
                         setCalculations({
                             ...calculations,
-                            autoplayAllowed: false,
-                            autoplayRequiresMute: false,
+                            autoplayAllowed: true,
+                            autoplayRequiresMute: true,
                             initPlayer: true
                         })
                     } else {
@@ -59,7 +59,7 @@ export default function VideoGoogleImaV2({ url, onFinishHandler, setAdIsLoading 
                     setCalculations({
                         ...calculations,
                         autoplayAllowed: true,
-                        autoplayRequiresMute: false,
+                        autoplayRequiresMute: true,
                         initPlayer: true
                     })
                 }

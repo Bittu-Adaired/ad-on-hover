@@ -78,6 +78,12 @@ class GarsejaAudioPlayer {
 
     this.#setDefaultAudioPlayerIframeSettings(this.#audioPlayerIframe);
 
+
+    // Added the muted attribute here
+    this.#audioPlayerIframe.setAttribute("muted", "");
+
+    console.log(this.#audioPlayerIframe)
+
     this.#container.appendChild(this.#audioPlayerIframe);
   }
 
@@ -228,3 +234,6 @@ function initializeGarsejaAudioPlayer() {
     console.error("Failed to initialize GarsejaAudioPlayer:", err);
   });
 }
+
+
+

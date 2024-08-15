@@ -6,7 +6,7 @@ import PlayerExampleSectionComponent from '../_common_components/player-example-
 import NoSsr from '@/app/_common-components/no-ssr'
 
 export const metadata: Metadata = {
-  title: 'Reklama paspaudus grojimo mygtuką garsėja teksto įgarsinimo grotuvas',
+  title: 'Reklama paspaudus grojimo mygtuką garsėja teksto įgarsinimo grotuvas', 
   description: 'Lengva grotuvo įgarsinimo instrukcija',
 }
 
