@@ -1,4 +1,5 @@
 class GarsejaAudioPlayer {
+  // Private properties
   #LOCATION_URL = window.location.href ? window.location.href : "";
 
   #DEFAULTS = {
@@ -86,25 +87,31 @@ class GarsejaAudioPlayer {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.intersectionRatio === 1) {
+          if (entry.intersectionRatio >= 0.5) {
+            // Check if 50% of the element is in view, to improve consistency
             console.log(`${entry.target.id} is in view`);
             self.#sendOnPlayerVisibleEvent();
           }
         });
       },
-      { threshold: [1.0] }
+      { threshold: [0.5] } // Trigger when 50% of the element is visible
     );
 
-    observer.observe(this.#container, {passive: true});
+    observer.observe(this.#container);
   }
 
   #sendOnPlayerVisibleEvent() {
-    this.#audioPlayerIframe.contentWindow.postMessage(
-      {
-        type: this.#AUDIO_PLAYER_EVENT_ID,
-        action: this.#AUDIO_PLAYER_ACTIONS.PLAYER_VISIBLE,
-      }
-    );
+    if (this.#audioPlayerIframe && this.#audioPlayerIframe.contentWindow) {
+      this.#audioPlayerIframe.contentWindow.postMessage(
+        {
+          type: this.#AUDIO_PLAYER_EVENT_ID,
+          action: this.#AUDIO_PLAYER_ACTIONS.PLAYER_VISIBLE,
+        },
+        "*"
+      );
+    } else {
+      console.warn("Audio player iframe is not ready to send messages.");
+    }
   }
 
   #setDefaultAudioPlayerIframeSettings(audioPlayerIframe) {
@@ -112,9 +119,12 @@ class GarsejaAudioPlayer {
     audioPlayerIframe.setAttribute("height", this.#DEFAULTS.PLAYER_SIZE.HEIGHT);
     audioPlayerIframe.setAttribute("frameborder", "0");
     audioPlayerIframe.setAttribute("scrolling", "no");
-    audioPlayerIframe.setAttribute("allowtransparency", "");
+    audioPlayerIframe.setAttribute("allowtransparency", "true");
     audioPlayerIframe.setAttribute("allow", "autoplay");
-    audioPlayerIframe.setAttribute("sandbox", "allow-scripts allow-same-origin allow-downloads allow-forms allow-modals allow-orientation-lock allow-pointer-lock allow-popups allow-presentation allow-storage-access-by-user-activation allow-top-navigation allow-top-navigation-by-user-activation allow-top-navigation-to-custom-protocols");    
+    audioPlayerIframe.setAttribute(
+      "sandbox",
+      "allow-scripts allow-same-origin allow-downloads allow-forms allow-modals allow-orientation-lock allow-pointer-lock allow-popups allow-presentation allow-storage-access-by-user-activation allow-top-navigation allow-top-navigation-by-user-activation allow-top-navigation-to-custom-protocols"
+    );
   }
 
   #initializeContainer() {
@@ -214,5 +224,7 @@ if (document.readyState !== "loading") {
 
 function initializeGarsejaAudioPlayer() {
   const garsejaAudioPlayer = new GarsejaAudioPlayer();
-  garsejaAudioPlayer.initPlayer();
+  garsejaAudioPlayer.initPlayer().catch(err => {
+    console.error("Failed to initialize GarsejaAudioPlayer:", err);
+  });
 }
