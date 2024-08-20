@@ -124,6 +124,7 @@ class GarsejaAudioPlayer {
       "allow",
       "autoplay; encrypted-media; gyroscope; picture-in-picture"
     );
+    audioPlayerIframe.setAttribute("playsinline", "");
     audioPlayerIframe.setAttribute("muted", "1");
     // audioPlayerIframe.setAttribute("scrolling", "no");
     // audioPlayerIframe.setAttribute("allowtransparency", "true");
