@@ -27,35 +27,34 @@ export default function VideoGoogleImaV2({
     autoplayRequiresMute: false,
   });
 
+  const isSafari = () => {
+    return (
+      /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
+    );
+  };
+
   useEffect(() => {
-    // canAutoPlay.video({ timeout: 100, muted: true }).then(function (response) {
-    //   if (response.result === false) {
-    //     // Unmuted autoplay is not allowed.
-    //     setCalculations({
-    //       ...calculations,
-    //       autoplayAllowed: false,
-    //       autoplayRequiresMute: false,
-    //       initPlayer: true,
-    //     });
-    //   } else {
-
-    //     // Unmuted autoplay is allowed.
-    //     setCalculations({
-    //       ...calculations,
-    //       autoplayAllowed: true,
-    //       autoplayRequiresMute: true,
-    //       initPlayer: true,
-    //     });
-    //   }
-    // });
-
     canAutoPlay
       .video({ timeout: 10, muted: true })
       .then(({ result, error }) => {
         if (result === false) {
-          console.log("Error did occur: ", error);
+          console.log("Error occurred: ", error);
+          if (isSafari()) {
+            setCalculations({
+              ...calculations,
+              autoplayAllowed: false,
+              autoplayRequiresMute: true, // Attempt to autoplay with mute on Safari
+              initPlayer: true,
+            });
+          }
         } else {
           console.log("Result: ", result);
+          setCalculations({
+            ...calculations,
+            autoplayAllowed: true,
+            autoplayRequiresMute: true,
+            initPlayer: true,
+          });
         }
       });
   }, [calculations]);
@@ -70,8 +69,23 @@ export default function VideoGoogleImaV2({
 
   if (!calculations.autoplayAllowed) {
     console.log("autoplayAllowed is false");
-    onFinishHandler();
-    return;
+    if (isSafari()) {
+      return (
+        <div onClick={() => setCalculations({ ...calculations, autoplayAllowed: true })}>
+          <p>Click to play the ad video</p>
+          <video
+            src={url}
+            muted
+            playsInline
+            controls
+            style={{ cursor: "pointer", maxWidth: "100%" }}
+          />
+        </div>
+      );
+    } else {
+      onFinishHandler();
+      return null;
+    }
   }
 
   if (!calculations.autoplayRequiresMute) {
@@ -86,8 +100,10 @@ export default function VideoGoogleImaV2({
         adUrl={url}
         onFinishHandler={onFinishHandler}
         setAdIsLoading={setAdIsLoading}
-        autoplayAllowed={true}
-        autoplayRequiresMute={true}
+        // autoplayAllowed={true}
+        // autoplayRequiresMute={true}
+        autoplayAllowed={calculations.autoplayAllowed}
+        autoplayRequiresMute={calculations.autoplayRequiresMute}
       />
     </div>
   );
@@ -113,6 +129,7 @@ const App = ({
   const videoJsOptions = {
     autoplay: autoplayAllowed,
     muted: autoplayRequiresMute,
+
     sources: [
       {
         src: "/audio-player/v3/empty.mp4",
