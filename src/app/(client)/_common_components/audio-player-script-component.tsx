@@ -6,7 +6,7 @@ export default function AudioPlayerScriptComponent() {
             id="audio-player-script"
             type="text/javascript"
             crossOrigin="anonymous"
-            strategy="lazyOnload"
+            strategy="afterInteractive"
             src="/audio-player/v3/audio-player-3.0.js">
         </Script>
     )

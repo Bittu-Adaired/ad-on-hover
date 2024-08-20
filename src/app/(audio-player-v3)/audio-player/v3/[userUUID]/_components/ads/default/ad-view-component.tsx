@@ -16,11 +16,11 @@ export default function AdViewComponent({ handleAdClose, videoAdUrl }: { handleA
         }, 2000)
 
         return () => clearTimeout(timeout)
-    }, [adIsLoading])
+    }, [adIsLoading, handleAdClose])
 
     return (
         <>
-            <div className={`w-full mx-auto flex justify-center items-center  ${adIsLoading ? 'hidden' : ''}`}>
+            <div className={`w-full mx-auto flex justify-center items-center  ${adIsLoading ? 'hidden' : 'block'}`}>
                 <div className="flex flex-row">
                     <div className="">
                         <VideoGoogleImaV2 url={videoAdUrl} onFinishHandler={handleAdClose} setAdIsLoading={setAdIsLoading} />

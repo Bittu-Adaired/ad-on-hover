@@ -14,10 +14,9 @@ class GarsejaAudioPlayer {
     PLAYER_VISIBLE: "player.visible",
   };
 
-  #AUDIO_PLAYER_SRC =
-    this.#LOCATION_URL.startsWith("http://localhost:3000")
-      ? "/audio-player/v3/"
-      : "https://audio-player-with-ads.vercel.app/audio-player/v3/";
+  #AUDIO_PLAYER_SRC = this.#LOCATION_URL.startsWith("http://localhost:3000")
+    ? "/audio-player/v3/"
+    : "https://audio-player-with-ads.vercel.app/audio-player/v3/";
 
   #MAIN_CONTAINER_ID = "garseja-audio-player";
   #VOICE_ATTRIBUTE = "data-voice";
@@ -52,8 +51,8 @@ class GarsejaAudioPlayer {
         `Player will not be initialized, because pageURL cannot be resolved`
       );
     }
-    this.#initializeAudioPlayerIframe();
     this.#initAdTriggers();
+    this.#initializeAudioPlayerIframe();
   }
 
   #initializeAudioPlayerIframe() {
@@ -63,6 +62,9 @@ class GarsejaAudioPlayer {
       themeId: this.#themeId,
       adType: this.#adType,
       videoAdUrl: this.#videoAdUrl,
+      autoPlay: 1,
+      muted: 1,
+      autoPause: 0,
     };
 
     const queryString = Object.keys(data)
@@ -78,29 +80,23 @@ class GarsejaAudioPlayer {
 
     this.#setDefaultAudioPlayerIframeSettings(this.#audioPlayerIframe);
 
-
-    // Added the muted attribute here
-    this.#audioPlayerIframe.setAttribute("muted", "");
-
-    console.log(this.#audioPlayerIframe)
+    console.log(this.#audioPlayerIframe);
 
     this.#container.appendChild(this.#audioPlayerIframe);
   }
 
   #initAdTriggers() {
     const self = this;
-
+    // Optionally, you can use IntersectionObserver as an additional check
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.intersectionRatio >= 0.5) {
-            // Check if 50% of the element is in view, to improve consistency
-            console.log(`${entry.target.id} is in view`);
+          if (entry.intersectionRatio >= 0.4) {
             self.#sendOnPlayerVisibleEvent();
           }
         });
       },
-      { threshold: [0.5] } // Trigger when 50% of the element is visible
+      { threshold: [0.4] }
     );
 
     observer.observe(this.#container);
@@ -124,13 +120,17 @@ class GarsejaAudioPlayer {
     audioPlayerIframe.setAttribute("width", this.#DEFAULTS.PLAYER_SIZE.WIDTH);
     audioPlayerIframe.setAttribute("height", this.#DEFAULTS.PLAYER_SIZE.HEIGHT);
     audioPlayerIframe.setAttribute("frameborder", "0");
-    audioPlayerIframe.setAttribute("scrolling", "no");
-    audioPlayerIframe.setAttribute("allowtransparency", "true");
-    audioPlayerIframe.setAttribute("allow", "autoplay");
     audioPlayerIframe.setAttribute(
-      "sandbox",
-      "allow-scripts allow-same-origin allow-downloads allow-forms allow-modals allow-orientation-lock allow-pointer-lock allow-popups allow-presentation allow-storage-access-by-user-activation allow-top-navigation allow-top-navigation-by-user-activation allow-top-navigation-to-custom-protocols"
+      "allow",
+      "autoplay; encrypted-media; gyroscope; picture-in-picture"
     );
+    audioPlayerIframe.setAttribute("muted", "1");
+    // audioPlayerIframe.setAttribute("scrolling", "no");
+    // audioPlayerIframe.setAttribute("allowtransparency", "true");
+    // audioPlayerIframe.setAttribute(
+    //   "sandbox",
+    //   "allow-scripts allow-same-origin allow-downloads allow-forms allow-modals allow-orientation-lock allow-pointer-lock allow-popups allow-presentation allow-storage-access-by-user-activation allow-top-navigation allow-top-navigation-by-user-activation allow-top-navigation-to-custom-protocols"
+    // );
   }
 
   #initializeContainer() {
@@ -218,6 +218,7 @@ class GarsejaAudioPlayerError extends Error {
 
 if (document.readyState !== "loading") {
   initializeGarsejaAudioPlayer();
+  console.log("GarsejaAudioPlayer initialized via document state not loading");
   console.debug(
     "GarsejaAudioPlayer initialized via document state not loading"
   );
@@ -230,10 +231,7 @@ if (document.readyState !== "loading") {
 
 function initializeGarsejaAudioPlayer() {
   const garsejaAudioPlayer = new GarsejaAudioPlayer();
-  garsejaAudioPlayer.initPlayer().catch(err => {
+  garsejaAudioPlayer.initPlayer().catch((err) => {
     console.error("Failed to initialize GarsejaAudioPlayer:", err);
   });
 }
-
-
-
