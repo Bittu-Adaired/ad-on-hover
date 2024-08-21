@@ -71,7 +71,189 @@ export default function DefaultPageTextComponent({
         Nullam euismod, nisl eget ultricies ultrices, orci ipsum aliquam nisi,
         eu tincidunt nisi nisl eu nisl.
       </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod,
+        nisl eget ultricies ultrices, orci ipsum aliquam nisi, eu tincidunt nisi
+        nisl eu nisl. Nullam euismod, nisl eget ultricies ultrices, orci ipsum
+        aliquam nisi, eu tincidunt nisi nisl eu nisl. Nullam euismod, nisl eget
+        ultricies ultrices, orci ipsum aliquam nisi, eu tincidunt nisi nisl eu
+        nisl. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+        euismod, nisl eget ultricies ultrices, orci ipsum aliquam nisi, eu
+        tincidunt nisi nisl eu nisl. Nullam euismod, nisl eget ultricies
+        ultrices, orci ipsum aliquam nisi, eu tincidunt nisi nisl eu nisl.
+        Nullam euismod, nisl eget ultricies ultrices, orci ipsum aliquam nisi,
+        eu tincidunt nisi nisl eu nisl.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod,
+        nisl eget ultricies ultrices, orci ipsum aliquam nisi, eu tincidunt nisi
+        nisl eu nisl. Nullam euismod, nisl eget ultricies ultrices, orci ipsum
+        aliquam nisi, eu tincidunt nisi nisl eu nisl. Nullam euismod, nisl eget
+        ultricies ultrices, orci ipsum aliquam nisi, eu tincidunt nisi nisl eu
+        nisl. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+        euismod, nisl eget ultricies ultrices, orci ipsum aliquam nisi, eu
+        tincidunt nisi nisl eu nisl. Nullam euismod, nisl eget ultricies
+        ultrices, orci ipsum aliquam nisi, eu tincidunt nisi nisl eu nisl.
+        Nullam euismod, nisl eget ultricies ultrices, orci ipsum aliquam nisi,
+        eu tincidunt nisi nisl eu nisl.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod,
+        nisl eget ultricies ultrices, orci ipsum aliquam nisi, eu tincidunt nisi
+        nisl eu nisl. Nullam euismod, nisl eget ultricies ultrices, orci ipsum
+        aliquam nisi, eu tincidunt nisi nisl eu nisl. Nullam euismod, nisl eget
+        ultricies ultrices, orci ipsum aliquam nisi, eu tincidunt nisi nisl eu
+        nisl. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+        euismod, nisl eget ultricies ultrices, orci ipsum aliquam nisi, eu
+        tincidunt nisi nisl eu nisl. Nullam euismod, nisl eget ultricies
+        ultrices, orci ipsum aliquam nisi, eu tincidunt nisi nisl eu nisl.
+        Nullam euismod, nisl eget ultricies ultrices, orci ipsum aliquam nisi,
+        eu tincidunt nisi nisl eu nisl.
+      </p>      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod,
+        nisl eget ultricies ultrices, orci ipsum aliquam nisi, eu tincidunt nisi
+        nisl eu nisl. Nullam euismod, nisl eget ultricies ultrices, orci ipsum
+        aliquam nisi, eu tincidunt nisi nisl eu nisl. Nullam euismod, nisl eget
+        ultricies ultrices, orci ipsum aliquam nisi, eu tincidunt nisi nisl eu
+        nisl. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+        euismod, nisl eget ultricies ultrices, orci ipsum aliquam nisi, eu
+        tincidunt nisi nisl eu nisl. Nullam euismod, nisl eget ultricies
+        ultrices, orci ipsum aliquam nisi, eu tincidunt nisi nisl eu nisl.
+        Nullam euismod, nisl eget ultricies ultrices, orci ipsum aliquam nisi,
+        eu tincidunt nisi nisl eu nisl.
+      </p>
       {children}
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod,
+        nisl eget ultricies ultrices, orci ipsum aliquam nisi, eu tincidunt nisi
+        nisl eu nisl. Nullam euismod, nisl eget ultricies ultrices, orci ipsum
+        aliquam nisi, eu tincidunt nisi nisl eu nisl. Nullam euismod, nisl eget
+        ultricies ultrices, orci ipsum aliquam nisi, eu tincidunt nisi nisl eu
+        nisl. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+        euismod, nisl eget ultricies ultrices, orci ipsum aliquam nisi, eu
+        tincidunt nisi nisl eu nisl. Nullam euismod, nisl eget ultricies
+        ultrices, orci ipsum aliquam nisi, eu tincidunt nisi nisl eu nisl.
+        Nullam euismod, nisl eget ultricies ultrices, orci ipsum aliquam nisi,
+        eu tincidunt nisi nisl eu nisl.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod,
+        nisl eget ultricies ultrices, orci ipsum aliquam nisi, eu tincidunt nisi
+        nisl eu nisl. Nullam euismod, nisl eget ultricies ultrices, orci ipsum
+        aliquam nisi, eu tincidunt nisi nisl eu nisl. Nullam euismod, nisl eget
+        ultricies ultrices, orci ipsum aliquam nisi, eu tincidunt nisi nisl eu
+        nisl. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+        euismod, nisl eget ultricies ultrices, orci ipsum aliquam nisi, eu
+        tincidunt nisi nisl eu nisl. Nullam euismod, nisl eget ultricies
+        ultrices, orci ipsum aliquam nisi, eu tincidunt nisi nisl eu nisl.
+        Nullam euismod, nisl eget ultricies ultrices, orci ipsum aliquam nisi,
+        eu tincidunt nisi nisl eu nisl.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod,
+        nisl eget ultricies ultrices, orci ipsum aliquam nisi, eu tincidunt nisi
+        nisl eu nisl. Nullam euismod, nisl eget ultricies ultrices, orci ipsum
+        aliquam nisi, eu tincidunt nisi nisl eu nisl. Nullam euismod, nisl eget
+        ultricies ultrices, orci ipsum aliquam nisi, eu tincidunt nisi nisl eu
+        nisl. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+        euismod, nisl eget ultricies ultrices, orci ipsum aliquam nisi, eu
+        tincidunt nisi nisl eu nisl. Nullam euismod, nisl eget ultricies
+        ultrices, orci ipsum aliquam nisi, eu tincidunt nisi nisl eu nisl.
+        Nullam euismod, nisl eget ultricies ultrices, orci ipsum aliquam nisi,
+        eu tincidunt nisi nisl eu nisl.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod,
+        nisl eget ultricies ultrices, orci ipsum aliquam nisi, eu tincidunt nisi
+        nisl eu nisl. Nullam euismod, nisl eget ultricies ultrices, orci ipsum
+        aliquam nisi, eu tincidunt nisi nisl eu nisl. Nullam euismod, nisl eget
+        ultricies ultrices, orci ipsum aliquam nisi, eu tincidunt nisi nisl eu
+        nisl. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+        euismod, nisl eget ultricies ultrices, orci ipsum aliquam nisi, eu
+        tincidunt nisi nisl eu nisl. Nullam euismod, nisl eget ultricies
+        ultrices, orci ipsum aliquam nisi, eu tincidunt nisi nisl eu nisl.
+        Nullam euismod, nisl eget ultricies ultrices, orci ipsum aliquam nisi,
+        eu tincidunt nisi nisl eu nisl.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod,
+        nisl eget ultricies ultrices, orci ipsum aliquam nisi, eu tincidunt nisi
+        nisl eu nisl. Nullam euismod, nisl eget ultricies ultrices, orci ipsum
+        aliquam nisi, eu tincidunt nisi nisl eu nisl. Nullam euismod, nisl eget
+        ultricies ultrices, orci ipsum aliquam nisi, eu tincidunt nisi nisl eu
+        nisl. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+        euismod, nisl eget ultricies ultrices, orci ipsum aliquam nisi, eu
+        tincidunt nisi nisl eu nisl. Nullam euismod, nisl eget ultricies
+        ultrices, orci ipsum aliquam nisi, eu tincidunt nisi nisl eu nisl.
+        Nullam euismod, nisl eget ultricies ultrices, orci ipsum aliquam nisi,
+        eu tincidunt nisi nisl eu nisl.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod,
+        nisl eget ultricies ultrices, orci ipsum aliquam nisi, eu tincidunt nisi
+        nisl eu nisl. Nullam euismod, nisl eget ultricies ultrices, orci ipsum
+        aliquam nisi, eu tincidunt nisi nisl eu nisl. Nullam euismod, nisl eget
+        ultricies ultrices, orci ipsum aliquam nisi, eu tincidunt nisi nisl eu
+        nisl. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+        euismod, nisl eget ultricies ultrices, orci ipsum aliquam nisi, eu
+        tincidunt nisi nisl eu nisl. Nullam euismod, nisl eget ultricies
+        ultrices, orci ipsum aliquam nisi, eu tincidunt nisi nisl eu nisl.
+        Nullam euismod, nisl eget ultricies ultrices, orci ipsum aliquam nisi,
+        eu tincidunt nisi nisl eu nisl.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod,
+        nisl eget ultricies ultrices, orci ipsum aliquam nisi, eu tincidunt nisi
+        nisl eu nisl. Nullam euismod, nisl eget ultricies ultrices, orci ipsum
+        aliquam nisi, eu tincidunt nisi nisl eu nisl. Nullam euismod, nisl eget
+        ultricies ultrices, orci ipsum aliquam nisi, eu tincidunt nisi nisl eu
+        nisl. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+        euismod, nisl eget ultricies ultrices, orci ipsum aliquam nisi, eu
+        tincidunt nisi nisl eu nisl. Nullam euismod, nisl eget ultricies
+        ultrices, orci ipsum aliquam nisi, eu tincidunt nisi nisl eu nisl.
+        Nullam euismod, nisl eget ultricies ultrices, orci ipsum aliquam nisi,
+        eu tincidunt nisi nisl eu nisl.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod,
+        nisl eget ultricies ultrices, orci ipsum aliquam nisi, eu tincidunt nisi
+        nisl eu nisl. Nullam euismod, nisl eget ultricies ultrices, orci ipsum
+        aliquam nisi, eu tincidunt nisi nisl eu nisl. Nullam euismod, nisl eget
+        ultricies ultrices, orci ipsum aliquam nisi, eu tincidunt nisi nisl eu
+        nisl. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+        euismod, nisl eget ultricies ultrices, orci ipsum aliquam nisi, eu
+        tincidunt nisi nisl eu nisl. Nullam euismod, nisl eget ultricies
+        ultrices, orci ipsum aliquam nisi, eu tincidunt nisi nisl eu nisl.
+        Nullam euismod, nisl eget ultricies ultrices, orci ipsum aliquam nisi,
+        eu tincidunt nisi nisl eu nisl.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod,
+        nisl eget ultricies ultrices, orci ipsum aliquam nisi, eu tincidunt nisi
+        nisl eu nisl. Nullam euismod, nisl eget ultricies ultrices, orci ipsum
+        aliquam nisi, eu tincidunt nisi nisl eu nisl. Nullam euismod, nisl eget
+        ultricies ultrices, orci ipsum aliquam nisi, eu tincidunt nisi nisl eu
+        nisl. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+        euismod, nisl eget ultricies ultrices, orci ipsum aliquam nisi, eu
+        tincidunt nisi nisl eu nisl. Nullam euismod, nisl eget ultricies
+        ultrices, orci ipsum aliquam nisi, eu tincidunt nisi nisl eu nisl.
+        Nullam euismod, nisl eget ultricies ultrices, orci ipsum aliquam nisi,
+        eu tincidunt nisi nisl eu nisl.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod,
+        nisl eget ultricies ultrices, orci ipsum aliquam nisi, eu tincidunt nisi
+        nisl eu nisl. Nullam euismod, nisl eget ultricies ultrices, orci ipsum
+        aliquam nisi, eu tincidunt nisi nisl eu nisl. Nullam euismod, nisl eget
+        ultricies ultrices, orci ipsum aliquam nisi, eu tincidunt nisi nisl eu
+        nisl. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+        euismod, nisl eget ultricies ultrices, orci ipsum aliquam nisi, eu
+        tincidunt nisi nisl eu nisl. Nullam euismod, nisl eget ultricies
+        ultrices, orci ipsum aliquam nisi, eu tincidunt nisi nisl eu nisl.
+        Nullam euismod, nisl eget ultricies ultrices, orci ipsum aliquam nisi,
+        eu tincidunt nisi nisl eu nisl.
+      </p>
+
     </div>
   );
 }
