@@ -100,8 +100,6 @@ export default function VideoGoogleImaV2({
         adUrl={url}
         onFinishHandler={onFinishHandler}
         setAdIsLoading={setAdIsLoading}
-        // autoplayAllowed={true}
-        // autoplayRequiresMute={true}
         autoplayAllowed={calculations.autoplayAllowed}
         autoplayRequiresMute={calculations.autoplayRequiresMute}
       />
