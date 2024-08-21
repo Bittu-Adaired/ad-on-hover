@@ -122,13 +122,13 @@ class GarsejaAudioPlayer {
       "autoplay; encrypted-media; gyroscope; picture-in-picture"
     );
     audioPlayerIframe.setAttribute("playsinline", "");
-    audioPlayerIframe.setAttribute("muted", "1");
-    // audioPlayerIframe.setAttribute("scrolling", "no");
-    // audioPlayerIframe.setAttribute("allowtransparency", "true");
-    // audioPlayerIframe.setAttribute(
-    //   "sandbox",
-    //   "allow-scripts allow-same-origin allow-downloads allow-forms allow-modals allow-orientation-lock allow-pointer-lock allow-popups allow-presentation allow-storage-access-by-user-activation allow-top-navigation allow-top-navigation-by-user-activation allow-top-navigation-to-custom-protocols"
-    // );
+    audioPlayerIframe.setAttribute("muted", "");
+    audioPlayerIframe.setAttribute("scrolling", "no");
+    audioPlayerIframe.setAttribute("allowtransparency", "true");
+    audioPlayerIframe.setAttribute(
+      "sandbox",
+      "allow-scripts allow-same-origin allow-downloads allow-forms allow-modals allow-orientation-lock allow-pointer-lock allow-popups allow-presentation allow-storage-access-by-user-activation allow-top-navigation allow-top-navigation-by-user-activation allow-top-navigation-to-custom-protocols"
+    );
   }
 
   #initializeContainer() {
