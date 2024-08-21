@@ -69,23 +69,8 @@ export default function VideoGoogleImaV2({
 
   if (!calculations.autoplayAllowed) {
     console.log("autoplayAllowed is false");
-    if (isSafari()) {
-      return (
-        <div onClick={() => setCalculations({ ...calculations, autoplayAllowed: true })}>
-          <p>Click to play the ad video</p>
-          <video
-            src={url}
-            muted
-            playsInline
-            controls
-            style={{ cursor: "pointer", maxWidth: "100%" }}
-          />
-        </div>
-      );
-    } else {
       onFinishHandler();
       return null;
-    }
   }
 
   if (!calculations.autoplayRequiresMute) {
@@ -142,28 +127,6 @@ const App = ({
   const handlePlayerReady = (player: any) => {
     console.log("Ads player is ready");
     playerRef.current = player;
-    // player.muted(true);
-    // player.play()
-    // setAdIsLoading(false)
-
-    // player.on('play', () => {
-    //     console.log('Player is playing')
-    //     const timeout = setTimeout(() => {
-    //         player.muted(false)
-    //         console.log('Player is unmuted')
-    //     }, 1000)
-
-    //     return () => clearTimeout(timeout)
-    // })
-
-    // // You can handle player events here, for example:
-    // player.on('waiting', () => {
-    //     videojs.log('player is waiting')
-    // })
-
-    // player.on('dispose', () => {
-    //     videojs.log('player will dispose')
-    // })
   };
 
   return (
@@ -175,6 +138,7 @@ const App = ({
       setAdIsLoading={setAdIsLoading}
       autoplayAllowed={autoplayAllowed}
       autoplayRequiresMute={autoplayRequiresMute}
+      
     />
   );
 };
@@ -212,8 +176,8 @@ export const VideoJS = ({
         "max-w-[373px]"
       );
       videoElement.setAttribute("webkit-playsinline", "");
-      videoElement.setAttribute("playsinline", "playsinline");
-      videoElement.setAttribute("muted", "muted");
+      videoElement.setAttribute("playsinline", "");
+      videoElement.setAttribute("muted", "");
 
       videoRef.current.appendChild(videoElement);
 
