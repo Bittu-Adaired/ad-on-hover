@@ -62,9 +62,6 @@ class GarsejaAudioPlayer {
       themeId: this.#themeId,
       adType: this.#adType,
       videoAdUrl: this.#videoAdUrl,
-      autoPlay: 1,
-      muted: 1,
-      autoPause: 0,
     };
 
     const queryString = Object.keys(data)

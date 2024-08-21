@@ -17,6 +17,7 @@ export default function PlayerWithAdHoverPlayer() {
           <div
             id="garseja-audio-player"
             style={{ width: "100%", height: "280px" }}
+            
             data-voice="aira"
             data-theme-id="default"
             data-user-uuid="e5401940-0c6d-4af8-b126-a30565b22350"

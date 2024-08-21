@@ -35,14 +35,14 @@ export default function VideoGoogleImaV2({
 
   useEffect(() => {
     canAutoPlay
-      .video({ timeout: 10, muted: true })
+      .video({ timeout: 100, muted: true })
       .then(({ result, error }) => {
-        if (result === false) {
+        if (!result) {
           console.log("Error occurred: ", error);
           if (isSafari()) {
             setCalculations({
               ...calculations,
-              autoplayAllowed: false,
+              autoplayAllowed: true,
               autoplayRequiresMute: true, // Attempt to autoplay with mute on Safari
               initPlayer: true,
             });
@@ -57,6 +57,11 @@ export default function VideoGoogleImaV2({
           });
         }
       });
+
+      if (isSafari() && !calculations.initPlayer) {
+        // Ensure player is initialized early for Safari
+        setCalculations((prev) => ({ ...prev, initPlayer: true }));
+      }
   }, [calculations]);
 
   console.log(`calculations: ${JSON.stringify(calculations)}`);
@@ -198,6 +203,9 @@ export const VideoJS = ({
         adTagUrl: url,
         id: videoJSID,
       });
+
+      player.ima.initializeAdDisplayContainer();
+
 
       if (!autoplayAllowed) {
         let startEvent: string = "click";
