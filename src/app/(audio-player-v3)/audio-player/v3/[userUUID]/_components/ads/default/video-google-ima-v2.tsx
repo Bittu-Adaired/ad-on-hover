@@ -180,9 +180,11 @@ export const VideoJS = ({
         "max-h-[280px]",
         "max-w-[373px]"
       );
-      videoElement.setAttribute("webkit-playsinline", "");
-      videoElement.setAttribute("playsinline", "");
-      videoElement.setAttribute("muted", "");
+      videoElement.setAttribute("autoplay","true");
+      videoElement.setAttribute("webkit-playsinline", "true");
+      videoElement.setAttribute("playsinline", "true");
+      videoElement.setAttribute("muted", "true");
+
 
       videoRef.current.appendChild(videoElement);
 
