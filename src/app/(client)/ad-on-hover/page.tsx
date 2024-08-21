@@ -17,12 +17,12 @@ export default function PlayerWithAdHoverPlayer() {
           <div
             id="garseja-audio-player"
             style={{ width: "100%", height: "280px" }}
-            
             data-voice="aira"
             data-theme-id="default"
             data-user-uuid="e5401940-0c6d-4af8-b126-a30565b22350"
             data-ad-type="HOVER_PLAYER"
-            data-video-ad-url="https://pubads.g.doubleclick.net/gampad/ads?iu=/21775744923/external/single_preroll_skippable&sz=640x480&ciu_szs=300x250%2C728x90&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s&correlator="
+            data-video-ad-url="https://pubads.g.doubleclick.net/gampad/ads?iu=/21775744923/external/vmap_ad_samples&sz=640x480&cust_params=sample_ar%3Dpreonly&ciu_szs=300x250%2C728x90&gdfp_req=1&ad_rule=1&output=vmap&unviewed_position_start=1&env=vp&impl=s&correlator="
+            // data-video-ad-url="https://pubads.g.doubleclick.net/gampad/ads?iu=/21775744923/external/single_preroll_skippable&sz=640x480&ciu_szs=300x250%2C728x90&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s&correlator="
           ></div>
         </NoSsr>
       </PlayerExampleSectionComponent>
