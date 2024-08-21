@@ -124,6 +124,7 @@ class GarsejaAudioPlayer {
     audioPlayerIframe.setAttribute("playsinline", "");
     audioPlayerIframe.setAttribute("muted", "");
     audioPlayerIframe.setAttribute("scrolling", "no");
+    audioPlayerIframe.setAttribute("allowFullscreen","")
     audioPlayerIframe.setAttribute("allowtransparency", "true");
     audioPlayerIframe.setAttribute(
       "sandbox",
