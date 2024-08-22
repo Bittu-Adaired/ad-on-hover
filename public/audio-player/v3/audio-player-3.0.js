@@ -215,22 +215,27 @@ class GarsejaAudioPlayerError extends Error {
   }
 }
 
-if (document.readyState !== "loading") {
-  initializeGarsejaAudioPlayer();
-  console.log("GarsejaAudioPlayer initialized via document state not loading");
-  console.debug(
-    "GarsejaAudioPlayer initialized via document state not loading"
-  );
-} else {
-  document.addEventListener("DOMContentLoaded", function () {
-    initializeGarsejaAudioPlayer();
-    console.debug("GarsejaAudioPlayer initialized via DOMContentLoaded event");
-  });
-}
-
 function initializeGarsejaAudioPlayer() {
+  const audioPlayerElement = document.getElementById('garseja-audio-player');
+
+  if (!audioPlayerElement) {
+    console.error("GarsejaAudioPlayerError: div with id='garseja-audio-player' was not found");
+    return;
+  }
+
   const garsejaAudioPlayer = new GarsejaAudioPlayer();
   garsejaAudioPlayer.initPlayer().catch((err) => {
     console.error("Failed to initialize GarsejaAudioPlayer:", err);
+  });
+}
+
+if (document.readyState !== "loading") {
+  initializeGarsejaAudioPlayer();
+  console.log("GarsejaAudioPlayer initialized via document state not loading");
+  console.debug("GarsejaAudioPlayer initialized via document state not loading");
+} else {
+  document.addEventListener("DOMContentLoaded", () => {
+    initializeGarsejaAudioPlayer();
+    console.debug("GarsejaAudioPlayer initialized via DOMContentLoaded event");
   });
 }

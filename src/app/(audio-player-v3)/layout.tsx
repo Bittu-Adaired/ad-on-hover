@@ -20,11 +20,8 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <main className={inter.className}>{children}</main>
-        <Script
-          id="google-ima"
-          src="//imasdk.googleapis.com/js/sdkloader/ima3.js"
-        ></Script>
-        <Script src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver"></Script>
+        {/* <Script id="google-ima" src="https://imasdk.googleapis.com/js/sdkloader/ima3.js"></Script>
+        <Script src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver"></Script> */}
       </body>
     </html>
   );

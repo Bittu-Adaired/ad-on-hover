@@ -5,7 +5,7 @@ export default function DefaultPageTextComponent({
 }) {
   return (
     <div className="px-5 max-w-screen-2xl mx-auto" suppressHydrationWarning>
-      <h1 className="text-3xl font-bold text-center">Text player</h1>
+      <h1 className="text-3xl font-bold text-center">Text player</h1> 
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod,
         nisl eget ultricies ultrices, orci ipsum aliquam nisi, eu tincidunt nisi

@@ -7,6 +7,6 @@ export default function PlayerExampleSectionComponent({ children }: { children: 
             <h2 className="text-2xl my-10 font-bold text-center">Example:</h2>
             {children}
             <AudioPlayerScriptComponent />
-        </>
+        </> 
     )
 }
